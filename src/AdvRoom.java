@@ -221,8 +221,8 @@ public class AdvRoom extends AdvRoomStub {
 		while(!scan.hasNext("\\S")) {
 			//prints out the values for movement map
 			//Will be stored in variables after testing
-			System.out.println("New Loop");
-			System.out.println(scan.next());
+
+			System.out.println("Scanned iten: " + scan.next());
 			if(!scan.hasNextInt()) {
 				System.out.println(scan.useDelimiter("/|\\s+").nextInt());
 				System.out.println(scan.next());
@@ -232,7 +232,7 @@ public class AdvRoom extends AdvRoomStub {
 				System.out.println(scan.nextInt());
 			}
 			
-			System.out.println("end of Loop");
+
 //			dir = scan.next();
 //			num = scan.nextInt();
 //			if(scan.hasNext("/")) {
@@ -245,7 +245,9 @@ public class AdvRoom extends AdvRoomStub {
 //			exit = new AdvMotionTableEntry(dir,num,key);
 //			exits.add(exit);		
 		}
-		
+
+		System.out.println("Exited loop");
+
 		roomDescript = (String[]) rooms.toArray(new String[rooms.size()]);
 		motions = exits.toArray(new AdvMotionTableEntry[exits.size()]);
 		
